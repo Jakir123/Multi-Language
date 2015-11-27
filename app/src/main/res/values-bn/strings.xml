@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">মাল্টি ভাষা</string>
+
+    <string name="name_label">নাম: </string>
+    <string name="phone_label">ফোন: </string>
+    <string name="title_activity_add_new">নতুন যোগ করুন</string>
+    <string name="welcome">স্বাগত!</string>
+    <string name="label_name">নাম</string>
+    <string name="hint_name">এখানে আপনার নাম লিখুন</string>
+    <string name="hint_phone">এখানে আপনার ফোন নং লিখুন .</string>
+
+    <string name="english">English</string>
+    <string name="bangla">Bangla</string>
+    <string name="japanese">Japanese</string>
+    <string name="french">French</string>
+    <string name="btn_save">Save</string>
+    <string name="title_activity_main">যোগাযোগ তালিকা</string>
+    <string name="header">স্বাগত</string>
+</resources>

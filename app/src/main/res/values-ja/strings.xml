@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">多言語</string>
+
+    <string name="name_label">名: </string>
+    <string name="phone_label">電話: </string>
+    <string name="title_activity_add_new">新しい連絡先を追加</string>
+    <string name="welcome">歓迎!</string>
+    <string name="label_name">名</string>
+    <string name="hint_name">ここにあなたの名前を入力します。</string>
+    <string name="hint_phone">ここではあなたの電話番号を入力してください</string>
+
+    <string name="english">English</string>
+    <string name="bangla">Bangla</string>
+    <string name="japanese">Japanese</string>
+    <string name="french">French</string>
+    <string name="btn_save">セーブ</string>
+    <string name="title_activity_main">連絡先リスト</string>
+    <string name="header">歓迎</string>
+</resources>

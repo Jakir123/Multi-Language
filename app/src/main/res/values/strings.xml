@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Multi-Language</string>
+
+    <string name="name_label">Name: </string>
+    <string name="phone_label">Phone: </string>
+    <string name="title_activity_add_new">Add New Contact</string>
+    <string name="welcome">Welcome!</string>
+    <string name="label_name">Name</string>
+    <string name="hint_name">Enter Your Name Here</string>
+    <string name="hint_phone">Enter Your Phone No. Here.</string>
+
+    <string name="english">English</string>
+    <string name="bangla">Bangla</string>
+    <string name="japanese">Japanese</string>
+    <string name="french">French</string>
+    <string name="btn_save">Save</string>
+    <string name="title_activity_main">Contact List</string>
+    <string name="header">Welcome</string>
+</resources>
