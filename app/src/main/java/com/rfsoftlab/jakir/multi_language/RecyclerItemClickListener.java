@@ -2,6 +2,7 @@ package com.rfsoftlab.jakir.multi_language;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
@@ -65,6 +66,7 @@ public class RecyclerItemClickListener implements RecyclerView.OnItemTouchListen
         public void onItemDownTap(View childView, int position);
 
     }
+
 
     protected class GestureListener extends GestureDetector.SimpleOnGestureListener {
 

@@ -62,8 +62,16 @@
 
         <Button
             android:id="@+id/btnAddNew"
-            android:layout_width="match_parent"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            android:layout_marginTop="15dp"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
+            android:background="@drawable/button_shape"
+            android:shadowColor="#A82064"
+            android:shadowDx="-3"
+            android:shadowDy="0"
+            android:shadowRadius="5"
             android:text="@string/btn_save" />
 
     </LinearLayout>
