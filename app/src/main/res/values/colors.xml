@@ -3,6 +3,8 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="colorWindowBackground">#E8EAF6</color>
+    <color name="colorNavigationBar">#9FA8DA</color>
 
     <color name="white">#ffffff</color>
     <color name="bg_gradient_start">#b21331</color>
