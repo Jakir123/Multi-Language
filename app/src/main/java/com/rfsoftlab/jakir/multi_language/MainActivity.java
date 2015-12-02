@@ -1,6 +1,8 @@
 package com.rfsoftlab.jakir.multi_language;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -28,14 +30,25 @@ public class MainActivity extends AppCompatActivity implements RecyclerItemClick
     private Contact_Adapter contactAdapter;
 
     private Locale myLocale;
+    private SharedPreferences sharedPreferences;
+    private SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        sharedPreferences=getSharedPreferences("ContactList", Context.MODE_PRIVATE);
+        String lang=sharedPreferences.getString("lang","");
+        if (lang.equalsIgnoreCase("")){
+
+        }else {
+            setLocale(lang);
+        }
+
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        Toast.makeText(MainActivity.this, "onCreate!", Toast.LENGTH_SHORT).show();
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 
         initializations();
@@ -75,55 +88,6 @@ public class MainActivity extends AppCompatActivity implements RecyclerItemClick
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-
-        switch (item.getItemId()) {
-            case R.id.english:
-                setLocale("en");
-                Toast.makeText(MainActivity.this, "You have selected English!", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.bangla:
-                setLocale("bn");
-                Toast.makeText(MainActivity.this, "You have selected Bangla!", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.japanese:
-                setLocale("ja");
-                Toast.makeText(MainActivity.this, "You have selected Japanese", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.french:
-                setLocale("fr");
-                Toast.makeText(MainActivity.this, "You have selected French!", Toast.LENGTH_SHORT).show();
-                break;
-            default:
-                setLocale("en");
-                break;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    public void setLocale(String lang) {
-        myLocale = new Locale(lang);
-        Resources res = getResources();
-        DisplayMetrics dm = res.getDisplayMetrics();
-        Configuration conf = res.getConfiguration();
-        conf.locale = myLocale;
-        res.updateConfiguration(conf, dm);
-
-        recreate();
-    }
-
-    @Override
     public void onItemClick(View childView, int position) {
 
     }
@@ -142,4 +106,14 @@ public class MainActivity extends AppCompatActivity implements RecyclerItemClick
     public void onItemDownTap(View childView, int position) {
 
     }
+
+    public void setLocale(String lang) {
+        myLocale = new Locale(lang);
+        Resources res = getResources();
+        DisplayMetrics dm = res.getDisplayMetrics();
+        Configuration conf = res.getConfiguration();
+        conf.locale = myLocale;
+        res.updateConfiguration(conf, dm);
+    }
+
 }
