@@ -6,8 +6,6 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
@@ -18,7 +16,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.util.ArrayList;
 import java.util.Locale;
 
 public class AddNewActivity extends AppCompatActivity {
@@ -87,26 +84,18 @@ public class AddNewActivity extends AppCompatActivity {
 
             case R.id.english:
                 setLocale("en");
-                editor.putString("lang", "en");
-                editor.commit();
                 Toast.makeText(AddNewActivity.this, "You have selected English!", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.bangla:
                 setLocale("bn");
-                editor.putString("lang", "bn");
-                editor.commit();
                 Toast.makeText(AddNewActivity.this, "You have selected Bangla!", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.japanese:
                 setLocale("ja");
-                editor.putString("lang", "ja");
-                editor.commit();
                 Toast.makeText(AddNewActivity.this, "You have selected Japanese", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.french:
                 setLocale("fr");
-                editor.putString("lang", "fr");
-                editor.commit();
                 Toast.makeText(AddNewActivity.this, "You have selected French!", Toast.LENGTH_SHORT).show();
                 break;
             default:
@@ -118,6 +107,9 @@ public class AddNewActivity extends AppCompatActivity {
     }
 
     public void setLocale(String lang) {
+        editor.putString("lang", lang);
+        editor.commit();
+
         myLocale = new Locale(lang);
         Resources res = getResources();
         DisplayMetrics dm = res.getDisplayMetrics();
@@ -126,5 +118,4 @@ public class AddNewActivity extends AppCompatActivity {
         res.updateConfiguration(conf, dm);
         recreate();
     }
-
 }
