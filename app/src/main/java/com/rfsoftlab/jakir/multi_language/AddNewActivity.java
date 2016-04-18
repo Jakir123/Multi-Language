@@ -34,6 +34,7 @@ public class AddNewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_new);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        
 
         initializations();
         clickListener();
